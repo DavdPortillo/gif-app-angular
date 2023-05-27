@@ -58,7 +58,7 @@ export class GifsService {
     if (resp.data && resp.data.length) {
       this.gifsList = resp.data;
     } else {
-
+      return
     }
   });
 }
