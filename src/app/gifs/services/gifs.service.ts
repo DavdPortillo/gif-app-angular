@@ -7,7 +7,7 @@ import { Gif, SearchReponse } from '../interfaces/gifs.interfaces';
 })
 export class GifsService {
 
-  public gifsList: Gif[] = [];
+  public gifs: Gif[] = [];
   private _tagsHistory: string[] = [];
 
   private apiKey: string = 'y8GK28S2XgQflil3ZNe71MJtOkqdAT0g';
@@ -55,10 +55,8 @@ export class GifsService {
 
     this.http.get<SearchReponse>(`${this.search}/search?`, { params })
   .subscribe((resp) => {
-    if (resp.data && resp.data.length) {
-      this.gifsList = resp.data;
-    } else {
-      return
+    {
+      this.gifs = resp.data;
     }
   });
 }

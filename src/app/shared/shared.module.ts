@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { GifsModule } from '../gifs/gifs.module';
+import { LadyImageComponent } from './components/lady-image/lady-image.component';
 
 
 
 @NgModule({
   declarations: [
-    SidebarComponent
+    SidebarComponent,
+    LadyImageComponent
   ],
   imports: [
     CommonModule
   ],
   exports:[
-    SidebarComponent
+    SidebarComponent,
+    LadyImageComponent
   ]
 })
 export class SharedModule { }
