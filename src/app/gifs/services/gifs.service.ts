@@ -44,7 +44,7 @@ export class GifsService {
   }
 
   searchTag(tag: string): void {
-    if (tag.length == 0) return;
+
 
     this.addToHistory(tag);
 
