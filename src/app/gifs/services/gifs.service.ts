@@ -54,11 +54,10 @@ export class GifsService {
       .set('q', tag);
 
     this.http.get<SearchReponse>(`${this.search}/search?`, { params })
-  .subscribe((resp) => {
-    {
-      this.gifs = resp.data;
-    }
-  });
-}
+      .subscribe((resp) => {
+        this.gifs = resp.data;
+      });
+  }
+
 
 }
